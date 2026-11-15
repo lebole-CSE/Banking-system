@@ -49,6 +49,7 @@
 
             <Button fx:id="btnLogin"
                     text="LOGIN"
+                    onAction="#handleLogin"
                     prefWidth="300"
                     prefHeight="42"
                     style="-fx-background-color: #142D4E;
