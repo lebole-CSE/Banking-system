@@ -1,3 +1,5 @@
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
@@ -27,89 +29,85 @@
                     <Label text="Customer Account Registration"
                            style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
 
-                    <GridPane hgap="20" vgap="15"
+                    <GridPane hgap="20" vgap="12"
                               maxWidth="750"
                               style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 15;">
 
                         <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                        <TextField fx:id="txtFirstName"
-                                   promptText="Enter first name"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                        <TextField fx:id="txtFirstName" promptText="Enter first name"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
                         <Label text="Surname" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                        <TextField fx:id="txtSurname"
-                                   promptText="Enter surname"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <TextField fx:id="txtSurname" promptText="Enter surname"
+                                   prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
                         <Label text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                        <TextField fx:id="txtCustomerId"
-                                   promptText="Enter customer ID"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                        <TextField fx:id="txtCustomerId" promptText="Enter customer ID"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
 
-                        <Label text="Phone Number" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                        <TextField fx:id="txtPhoneNumber"
-                                   promptText="Enter phone number"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                        <Label text="National ID" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                        <TextField fx:id="txtNationalId" promptText="Enter national ID"
+                                   prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-                        <Label text="Account Type" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-                        <ComboBox fx:id="cmbAccountType"
-                                  promptText="Select account type"
+                        <Label text="Phone Number" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                        <TextField fx:id="txtPhoneNumber" promptText="Enter phone number"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+
+                        <Label text="Email Address" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <TextField fx:id="txtEmail" promptText="Enter email address"
+                                   prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+                        <Label text="Residential Address" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                        <TextField fx:id="txtAddress" promptText="Enter residential address"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+
+                        <Label text="Date of Birth (YYYY-MM-DD)" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        <DatePicker fx:id="dpDateOfBirth" prefHeight="40"
+                                    GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+                        <Label text="Account Type" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                        <ComboBox fx:id="cmbAccountType" promptText="Select account type"
                                   prefWidth="300" prefHeight="40"
-                                  GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                                  GridPane.columnIndex="0" GridPane.rowIndex="9"/>
 
-                        <Label text="Initial Deposit (BWP)" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-                        <TextField fx:id="txtInitialDeposit"
-                                   promptText="Enter initial deposit"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                        <Label text="Initial Deposit (BWP)" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                        <TextField fx:id="txtInitialDeposit" promptText="Enter initial deposit"
+                                   prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
 
-                        <Label text="Branch" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-                        <TextField fx:id="txtBranch"
-                                   promptText="Enter branch"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                        <Label text="Branch" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+                        <TextField fx:id="txtBranch" promptText="Enter branch"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
 
-                        <Label text="Company Name (Cheque Account)" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
-                        <TextField fx:id="txtCompanyName"
-                                   promptText="Enter company name"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+                        <Label text="Company Name (Cheque Account)" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+                        <TextField fx:id="txtCompanyName" promptText="Enter company name"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
 
-                        <Label text="Company Address (Cheque Account)" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
-                        <TextField fx:id="txtCompanyAddress"
-                                   promptText="Enter company address"
-                                   prefHeight="40"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+                        <Label text="Company Address (Cheque Account)" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+                        <TextField fx:id="txtCompanyAddress" promptText="Enter company address"
+                                   prefHeight="40" GridPane.columnIndex="1" GridPane.rowIndex="13"/>
 
-                        <Label fx:id="lblAccountMessage"
-                               wrapText="true"
-                               GridPane.columnIndex="0"
-                               GridPane.rowIndex="10"
+                        <Label text="Job Title (Cheque Account)" GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+                        <TextField fx:id="txtJobTitle" promptText="Enter job title"
+                                   prefHeight="40" GridPane.columnIndex="0" GridPane.rowIndex="15"/>
+
+                        <Label fx:id="lblAccountMessage" wrapText="true"
+                               GridPane.columnIndex="0" GridPane.rowIndex="16"
                                GridPane.columnSpan="2"
                                style="-fx-text-fill: #163B65;"/>
 
                         <HBox spacing="15"
-                              GridPane.columnIndex="0"
-                              GridPane.rowIndex="11"
+                              GridPane.columnIndex="0" GridPane.rowIndex="17"
                               GridPane.columnSpan="2">
 
-                            <Button text="CREATE ACCOUNT"
-                                    onAction="#createAccount"
+                            <Button text="CREATE ACCOUNT" onAction="#createAccount"
                                     prefWidth="200" prefHeight="43"
                                     style="-fx-background-color: #163B65; -fx-text-fill: white; -fx-font-weight: bold;"/>
 
-                            <Button text="CLEAR"
-                                    onAction="#clearAccount"
+                            <Button text="CLEAR" onAction="#clearAccount"
                                     prefWidth="120" prefHeight="43"/>
 
-                            <Button text="BACK"
-                                    onAction="#backToDashboard"
+                            <Button text="BACK" onAction="#backToDashboard"
                                     prefWidth="120" prefHeight="43"/>
-
                         </HBox>
 
                     </GridPane>
@@ -117,5 +115,4 @@
             </content>
         </ScrollPane>
     </center>
-
 </BorderPane>
