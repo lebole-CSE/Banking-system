@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.DashboardController"
+            prefWidth="1000" prefHeight="650"
+            style="-fx-background-color: #F3F6FA;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20"
+              style="-fx-background-color: #163B65; -fx-padding: 22;">
+            <Label text="BANKING SYSTEM"
+                   style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="LOG OUT"
+                    onAction="#logout"
+                    style="-fx-background-color: white; -fx-text-fill: #163B65; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="25" alignment="TOP_LEFT"
+              style="-fx-padding: 40;">
+
+            <VBox spacing="8">
+                <Label text="Dashboard"
+                       style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+                <Label fx:id="lblCustomerName"
+                       text="Welcome, Customer"
+                       style="-fx-font-size: 17px; -fx-text-fill: #68788A;"/>
+            </VBox>
+
+            <Label text="ACCOUNT OVERVIEW"
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+
+            <GridPane hgap="20" vgap="20">
+
+                <VBox GridPane.columnIndex="0" GridPane.rowIndex="0"
+                      spacing="12"
+                      style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25;"
+                      prefWidth="260" prefHeight="145">
+                    <Label text="Savings Account"
+                           style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+                    <Label fx:id="lblSavingsBalance"
+                           text="BWP 0.00"
+                           style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="0"
+                      spacing="12"
+                      style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25;"
+                      prefWidth="260" prefHeight="145">
+                    <Label text="Investment Account"
+                           style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+                    <Label fx:id="lblInvestmentBalance"
+                           text="BWP 0.00"
+                           style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="0"
+                      spacing="12"
+                      style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 25;"
+                      prefWidth="260" prefHeight="145">
+                    <Label text="Cheque Account"
+                           style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+                    <Label fx:id="lblChequeBalance"
+                           text="BWP 0.00"
+                           style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+                </VBox>
+
+            </GridPane>
+
+            <Label text="QUICK ACTIONS"
+                   style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+
+            <HBox spacing="15">
+                <Button text="View Accounts"
+                        onAction="#openAccounts"
+                        prefWidth="180" prefHeight="45"
+                        style="-fx-background-color: #163B65; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+                <Button text="Transactions"
+                        onAction="#openTransactions"
+                        prefWidth="180" prefHeight="45"
+                        style="-fx-background-color: #163B65; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+                <Button text="Open New Account"
+                        onAction="#openNewAccount"
+                        prefWidth="180" prefHeight="45"
+                        style="-fx-background-color: #D69E36; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.LoginController"
+            prefWidth="900" prefHeight="550"
+            style="-fx-background-color: #F3F6FA;">
+
+    <children>
+        <VBox alignment="CENTER"
+              spacing="20"
+              prefWidth="420"
+              layoutX="240"
+              layoutY="85"
+              style="-fx-background-color: white;
+                     -fx-background-radius: 15;
+                     -fx-padding: 40;">
+
+            <Label text="WELCOME BACK"
+                   style="-fx-font-size: 28px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #163B65;"/>
+
+            <Label text="Banking System"
+                   style="-fx-font-size: 16px;
+                          -fx-text-fill: #68788A;"/>
+
+            <Label text="Username"
+                   style="-fx-font-weight: bold;"/>
+
+            <TextField fx:id="txtUsername"
+                       promptText="Enter your username"
+                       prefHeight="42"/>
+
+            <Label text="Password"
+                   style="-fx-font-weight: bold;"/>
+
+            <PasswordField fx:id="txtPassword"
+                           promptText="Enter your password"
+                           prefHeight="42"/>
+
+            <Label fx:id="lblLoginMessage"
+                   wrapText="true"
+                   style="-fx-text-fill: red;"/>
+
+            <Button fx:id="btnLogin"
+                    text="LOGIN"
+                    onAction="#handleLogin"
+                    prefWidth="320"
+                    prefHeight="45"
+                    style="-fx-background-color: #163B65;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 8;"/>
+
+        </VBox>
+    </children>
+</AnchorPane>

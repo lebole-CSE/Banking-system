@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.TransactionController"
+            prefWidth="1000" prefHeight="650"
+            style="-fx-background-color: #F3F6FA;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              style="-fx-background-color: #163B65; -fx-padding: 22;">
+            <Label text="TRANSACTIONS"
+                   style="-fx-font-size: 23px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="25"
+              style="-fx-padding: 45;">
+
+            <Label text="Make a Transaction"
+                   style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #163B65;"/>
+
+            <VBox spacing="18"
+                  maxWidth="550"
+                  style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 35;">
+
+                <Label text="Select Account"
+                       style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="cmbTransactionAccount"
+                          promptText="Choose account"
+                          prefWidth="480" prefHeight="42"/>
+
+                <Label text="Transaction Type"
+                       style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="cmbTransactionType"
+                          promptText="Choose transaction type"
+                          prefWidth="480" prefHeight="42"/>
+
+                <Label text="Amount (BWP)"
+                       style="-fx-font-weight: bold;"/>
+                <TextField fx:id="txtTransactionAmount"
+                           promptText="Enter amount"
+                           prefHeight="42"/>
+
+                <Label fx:id="lblTransactionMessage"
+                       wrapText="true"
+                       style="-fx-text-fill: #163B65;"/>
+
+                <HBox spacing="15">
+                    <Button text="DEPOSIT"
+                            onAction="#makeDeposit"
+                            prefWidth="220" prefHeight="45"
+                            style="-fx-background-color: #163B65; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+                    <Button text="WITHDRAW"
+                            onAction="#makeWithdrawal"
+                            prefWidth="220" prefHeight="45"
+                            style="-fx-background-color: #D69E36; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                </HBox>
+
+                <Button text="CLEAR"
+                        onAction="#clearTransaction"
+                        prefWidth="455" prefHeight="38"/>
+
+            </VBox>
+
+            <Button text="Back to Dashboard"
+                    onAction="#backToDashboard"
+                    prefWidth="180" prefHeight="40"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
