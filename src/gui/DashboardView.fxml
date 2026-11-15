@@ -9,6 +9,7 @@
             xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="1100" prefHeight="720"
             style="-fx-background-color: #F2F5FA;">
+            fx:controller="gui.DashboardController"
 
     <!-- TOP HEADER -->
     <top>
@@ -31,6 +32,7 @@
                     text="Logout"
                     style="-fx-background-color: #142D4E;
                            -fx-text-fill: white;"/>
+                   
 
         </HBox>
     </top>
@@ -58,18 +60,21 @@
                     maxWidth="Infinity"
                     style="-fx-background-color: transparent;
                            -fx-text-fill: white;"/>
+                    onAction="#openAccounts"
 
             <Button fx:id="btnTransactions"
                     text="Transactions"
                     maxWidth="Infinity"
                     style="-fx-background-color: transparent;
                            -fx-text-fill: white;"/>
+                    onAction="#openTransactions"
 
             <Button fx:id="btnOpenAccount"
                     text="Open Account"
                     maxWidth="Infinity"
                     style="-fx-background-color: transparent;
                            -fx-text-fill: white;"/>
+                  onAction="#openNewAccount"
 
             <Region VBox.vgrow="ALWAYS"/>
 
@@ -78,6 +83,7 @@
                     maxWidth="Infinity"
                     style="-fx-background-color: #9C3030;
                            -fx-text-fill: white;"/>
+                   onAction="#logout"
 
         </VBox>
     </left>
