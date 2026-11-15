@@ -8,7 +8,9 @@
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="900" prefHeight="650"
-            style="-fx-background-color: #F2F5FA;">
+            style="-fx-background-color: #F2F5FA;"
+            fx:controller="gui.TransactionController">
+
 
     <top>
         <HBox alignment="CENTER_LEFT"
@@ -73,14 +75,16 @@
                             prefWidth="180"
                             prefHeight="42"
                             style="-fx-background-color: #16804A;
-                                   -fx-text-fill: white;"/>
+                                   -fx-text-fill: white;"
+                            onAction="#makeDeposit"/>
 
                     <Button fx:id="btnMakeWithdrawal"
                             text="Withdraw"
                             prefWidth="180"
                             prefHeight="42"
                             style="-fx-background-color: #B33A3A;
-                                   -fx-text-fill: white;"/>
+                                   -fx-text-fill: white;"
+                            onAction="#makeWithdrawal"/>
                 </HBox>
 
                 <Button fx:id="btnClearTransaction"
