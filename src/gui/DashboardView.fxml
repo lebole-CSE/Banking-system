@@ -1,0 +1,247 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1100" prefHeight="720"
+            style="-fx-background-color: #F2F5FA;">
+
+    <!-- TOP HEADER -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15"
+              style="-fx-background-color: white;
+                     -fx-padding: 18 25 18 25;">
+
+            <Label text="BANKING SYSTEM"
+                   style="-fx-font-size: 21px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #142D4E;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="lblCustomerName"
+                   text="Welcome, Customer"
+                   style="-fx-font-size: 14px;"/>
+
+            <Button fx:id="btnHeaderLogout"
+                    text="Logout"
+                    style="-fx-background-color: #142D4E;
+                           -fx-text-fill: white;"/>
+
+        </HBox>
+    </top>
+
+    <!-- LEFT SIDEBAR -->
+    <left>
+        <VBox spacing="18"
+              prefWidth="210"
+              style="-fx-background-color: #142D4E;
+                     -fx-padding: 25;">
+
+            <Label text="BANK MENU"
+                   style="-fx-text-fill: white;
+                          -fx-font-size: 17px;
+                          -fx-font-weight: bold;"/>
+
+            <Button fx:id="btnDashboard"
+                    text="Dashboard"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: #29496F;
+                           -fx-text-fill: white;"/>
+
+            <Button fx:id="btnMyAccounts"
+                    text="My Accounts"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: white;"/>
+
+            <Button fx:id="btnTransactions"
+                    text="Transactions"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: white;"/>
+
+            <Button fx:id="btnOpenAccount"
+                    text="Open Account"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: transparent;
+                           -fx-text-fill: white;"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button fx:id="btnLogout"
+                    text="Logout"
+                    maxWidth="Infinity"
+                    style="-fx-background-color: #9C3030;
+                           -fx-text-fill: white;"/>
+
+        </VBox>
+    </left>
+
+    <!-- MAIN DASHBOARD CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true"
+                    style="-fx-background: #F2F5FA;
+                           -fx-background-color: #F2F5FA;">
+
+            <VBox spacing="22">
+                <padding>
+                    <Insets top="25" right="25"
+                            bottom="25" left="25"/>
+                </padding>
+
+                <VBox spacing="5">
+                    <Label text="Dashboard"
+                           style="-fx-font-size: 26px;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #142D4E;"/>
+
+                    <Label text="Overview of your banking activities"
+                           style="-fx-text-fill: #777777;"/>
+                </VBox>
+
+                <!-- ACCOUNT BALANCE CARDS -->
+                <GridPane hgap="15" vgap="15">
+
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33.33"/>
+                        <ColumnConstraints percentWidth="33.33"/>
+                        <ColumnConstraints percentWidth="33.34"/>
+                    </columnConstraints>
+
+                    <VBox spacing="12" GridPane.columnIndex="0"
+                          style="-fx-background-color: white;
+                                 -fx-background-radius: 10;
+                                 -fx-padding: 20;">
+
+                        <Label text="SAVINGS ACCOUNT"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #777777;"/>
+
+                        <Label fx:id="lblSavingsBalance"
+                               text="BWP 0.00"
+                               style="-fx-font-size: 23px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #142D4E;"/>
+
+                        <Label text="Monthly interest: 0.05%"
+                               style="-fx-text-fill: #16804A;"/>
+                    </VBox>
+
+                    <VBox spacing="12" GridPane.columnIndex="1"
+                          style="-fx-background-color: white;
+                                 -fx-background-radius: 10;
+                                 -fx-padding: 20;">
+
+                        <Label text="INVESTMENT ACCOUNT"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #777777;"/>
+
+                        <Label fx:id="lblInvestmentBalance"
+                               text="BWP 0.00"
+                               style="-fx-font-size: 23px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #142D4E;"/>
+
+                        <Label text="Monthly interest: 5%"
+                               style="-fx-text-fill: #16804A;"/>
+                    </VBox>
+
+                    <VBox spacing="12" GridPane.columnIndex="2"
+                          style="-fx-background-color: white;
+                                 -fx-background-radius: 10;
+                                 -fx-padding: 20;">
+
+                        <Label text="CHEQUE ACCOUNT"
+                               style="-fx-font-weight: bold;
+                                      -fx-text-fill: #777777;"/>
+
+                        <Label fx:id="lblChequeBalance"
+                               text="BWP 0.00"
+                               style="-fx-font-size: 23px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #142D4E;"/>
+
+                        <Label text="Everyday transactions"
+                               style="-fx-text-fill: #777777;"/>
+                    </VBox>
+
+                </GridPane>
+
+                <!-- QUICK ACTIONS -->
+                <VBox spacing="12">
+                    <Label text="Quick Actions"
+                           style="-fx-font-size: 19px;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #142D4E;"/>
+
+                    <HBox spacing="15">
+                        <Button fx:id="btnDeposit"
+                                text="Deposit Money"
+                                prefWidth="150"
+                                prefHeight="40"/>
+
+                        <Button fx:id="btnWithdraw"
+                                text="Withdraw Money"
+                                prefWidth="150"
+                                prefHeight="40"/>
+
+                        <Button fx:id="btnViewAccounts"
+                                text="View Accounts"
+                                prefWidth="150"
+                                prefHeight="40"/>
+
+                        <Button fx:id="btnNewAccount"
+                                text="Open New Account"
+                                prefWidth="170"
+                                prefHeight="40"/>
+                    </HBox>
+                </VBox>
+
+                <!-- RECENT TRANSACTIONS -->
+                <VBox spacing="12"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 10;
+                             -fx-padding: 20;">
+
+                    <Label text="Recent Transactions"
+                           style="-fx-font-size: 19px;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #142D4E;"/>
+
+                    <TableView fx:id="tblRecentTransactions"
+                               prefHeight="250">
+
+                        <columns>
+                            <TableColumn fx:id="colTransactionId"
+                                         text="Transaction ID"
+                                         prefWidth="130"/>
+
+                            <TableColumn fx:id="colDate"
+                                         text="Date"
+                                         prefWidth="150"/>
+
+                            <TableColumn fx:id="colType"
+                                         text="Transaction Type"
+                                         prefWidth="150"/>
+
+                            <TableColumn fx:id="colAmount"
+                                         text="Amount (BWP)"
+                                         prefWidth="150"/>
+
+                            <TableColumn fx:id="colStatus"
+                                         text="Status"
+                                         prefWidth="120"/>
+                        </columns>
+
+                    </TableView>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
