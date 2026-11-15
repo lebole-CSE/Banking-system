@@ -9,6 +9,7 @@
             xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="1100" prefHeight="720"
             style="-fx-background-color: #F2F5FA;">
+            fx:controller="gui.AccountController"
 
     <top>
         <HBox alignment="CENTER_LEFT"
@@ -24,6 +25,8 @@
 
             <Button fx:id="btnBackDashboard"
                     text="Back to Dashboard"/>
+                    onAction="#backToDashboard"
+
         </HBox>
     </top>
 
@@ -120,6 +123,7 @@
 
                 <Button fx:id="btnRefreshAccounts"
                         text="Refresh Accounts"/>
+                        onAction="#refreshAccounts"
             </HBox>
 
         </VBox>
