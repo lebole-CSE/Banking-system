@@ -1,0 +1,127 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1100" prefHeight="720"
+            style="-fx-background-color: #F2F5FA;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              style="-fx-background-color: white;
+                     -fx-padding: 20;">
+
+            <Label text="MY ACCOUNTS"
+                   style="-fx-font-size: 23px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #142D4E;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnBackDashboard"
+                    text="Back to Dashboard"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="25" right="25"
+                        bottom="25" left="25"/>
+            </padding>
+
+            <Label text="Account Information"
+                   style="-fx-font-size: 21px;
+                          -fx-font-weight: bold;"/>
+
+            <TableView fx:id="tblAccounts"
+                       prefHeight="250">
+
+                <columns>
+                    <TableColumn fx:id="colAccountNumber"
+                                 text="Account Number"
+                                 prefWidth="180"/>
+
+                    <TableColumn fx:id="colAccountType"
+                                 text="Account Type"
+                                 prefWidth="180"/>
+
+                    <TableColumn fx:id="colBranch"
+                                 text="Branch"
+                                 prefWidth="160"/>
+
+                    <TableColumn fx:id="colAccountBalance"
+                                 text="Balance (BWP)"
+                                 prefWidth="180"/>
+                </columns>
+            </TableView>
+
+            <VBox spacing="12"
+                  style="-fx-background-color: white;
+                         -fx-background-radius: 10;
+                         -fx-padding: 20;">
+
+                <Label text="Selected Account Details"
+                       style="-fx-font-size: 19px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #142D4E;"/>
+
+                <GridPane hgap="20" vgap="15">
+
+                    <Label text="Account Number:"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="0"/>
+
+                    <Label fx:id="lblAccountNumber"
+                           text="-"
+                           GridPane.rowIndex="0"
+                           GridPane.columnIndex="1"/>
+
+                    <Label text="Account Type:"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="0"/>
+
+                    <Label fx:id="lblAccountType"
+                           text="-"
+                           GridPane.rowIndex="1"
+                           GridPane.columnIndex="1"/>
+
+                    <Label text="Current Balance:"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="0"/>
+
+                    <Label fx:id="lblAccountBalance"
+                           text="BWP 0.00"
+                           GridPane.rowIndex="2"
+                           GridPane.columnIndex="1"/>
+
+                    <Label text="Branch:"
+                           GridPane.rowIndex="3"
+                           GridPane.columnIndex="0"/>
+
+                    <Label fx:id="lblAccountBranch"
+                           text="-"
+                           GridPane.rowIndex="3"
+                           GridPane.columnIndex="1"/>
+
+                </GridPane>
+            </VBox>
+
+            <HBox spacing="12">
+                <Button fx:id="btnAccountDeposit"
+                        text="Deposit"/>
+
+                <Button fx:id="btnAccountWithdraw"
+                        text="Withdraw"/>
+
+                <Button fx:id="btnRefreshAccounts"
+                        text="Refresh Accounts"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
