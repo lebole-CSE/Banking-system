@@ -1,0 +1,125 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1000" prefHeight="750"
+            style="-fx-background-color: #F2F5FA;">
+
+    <top>
+        <HBox alignment="CENTER_LEFT"
+              style="-fx-background-color: white;
+                     -fx-padding: 20;">
+
+            <Label text="OPEN NEW ACCOUNT"
+                   style="-fx-font-size: 23px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #142D4E;"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnOpenAccountBack"
+                    text="Back to Dashboard"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox alignment="TOP_CENTER" spacing="18">
+                <padding>
+                    <Insets top="25" right="25"
+                            bottom="25" left="25"/>
+                </padding>
+
+                <VBox spacing="15"
+                      maxWidth="650"
+                      style="-fx-background-color: white;
+                             -fx-background-radius: 12;
+                             -fx-padding: 30;">
+
+                    <Label text="Account Registration"
+                           style="-fx-font-size: 22px;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #142D4E;"/>
+
+                    <Label text="Customer Information"
+                           style="-fx-font-size: 16px;
+                                  -fx-font-weight: bold;"/>
+
+                    <Label text="First Name"/>
+                    <TextField fx:id="txtFirstName"
+                               promptText="Enter first name"/>
+
+                    <Label text="Surname"/>
+                    <TextField fx:id="txtSurname"
+                               promptText="Enter surname"/>
+
+                    <Label text="Customer ID"/>
+                    <TextField fx:id="txtCustomerId"
+                               promptText="Enter customer ID"/>
+
+                    <Label text="Phone Number"/>
+                    <TextField fx:id="txtPhoneNumber"
+                               promptText="Enter phone number"/>
+
+                    <Label text="Account Information"
+                           style="-fx-font-size: 16px;
+                                  -fx-font-weight: bold;"/>
+
+                    <Label text="Account Type"/>
+
+                    <ComboBox fx:id="cmbAccountType"
+                              promptText="Select account type"
+                              maxWidth="Infinity"/>
+
+                    <Label text="Initial Deposit (BWP)"/>
+
+                    <TextField fx:id="txtInitialDeposit"
+                               promptText="Enter initial deposit"/>
+
+                    <Label text="Branch"/>
+
+                    <TextField fx:id="txtBranch"
+                               promptText="Enter branch"/>
+
+                    <Separator/>
+
+                    <Label text="Employment Information (Cheque Account)"
+                           style="-fx-font-size: 16px;
+                                  -fx-font-weight: bold;"/>
+
+                    <Label text="Company Name"/>
+
+                    <TextField fx:id="txtCompanyName"
+                               promptText="Enter company name"/>
+
+                    <Label text="Company Address"/>
+
+                    <TextField fx:id="txtCompanyAddress"
+                               promptText="Enter company address"/>
+
+                    <Label fx:id="lblAccountMessage"
+                           text=""
+                           wrapText="true"/>
+
+                    <Button fx:id="btnCreateAccount"
+                            text="CREATE ACCOUNT"
+                            prefHeight="45"
+                            maxWidth="Infinity"
+                            style="-fx-background-color: #142D4E;
+                                   -fx-text-fill: white;
+                                   -fx-font-weight: bold;"/>
+
+                    <Button fx:id="btnClearAccount"
+                            text="Clear Form"
+                            maxWidth="Infinity"/>
+
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
