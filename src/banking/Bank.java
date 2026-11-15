@@ -1,3 +1,4 @@
+
 package banking;
 
 import java.math.BigDecimal;
@@ -9,6 +10,8 @@ public class Bank {
     private String branch;
 
     private final BankRepository repository;
+    private final CustomerDAO customerDAO;
+    private final AccountDAO accountDAO;
 
     public Bank(
             String name,
@@ -18,9 +21,13 @@ public class Bank {
         this.name = name;
         this.branch = branch;
         this.repository = repository;
+        this.customerDAO = new CustomerDAO();
+        this.accountDAO = new AccountDAO();
     }
 
     public void registerCustomer(Customer customer) {
+
+        customerDAO.saveCustomer(customer);
         repository.saveCustomer(customer);
     }
 
@@ -54,29 +61,24 @@ public class Bank {
         switch (type) {
 
             case SAVINGS:
-
                 account = new SavingsAccount(
                     accountNumber,
                     branch,
                     customer,
                     openingBalance
                 );
-
                 break;
 
             case INVESTMENT:
-
                 account = new InvestmentAccount(
                     accountNumber,
                     branch,
                     customer,
                     openingBalance
                 );
-
                 break;
 
             case CHEQUE:
-
                 account = new ChequeAccount(
                     accountNumber,
                     branch,
@@ -84,16 +86,15 @@ public class Bank {
                     openingBalance,
                     employmentDetails
                 );
-
                 break;
 
             default:
-
                 throw new IllegalArgumentException(
                     "Unsupported account type."
                 );
         }
 
+        accountDAO.saveAccount(account);
         repository.saveAccount(account);
 
         return account;
