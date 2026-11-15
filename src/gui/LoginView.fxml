@@ -1,0 +1,65 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="900" prefHeight="600"
+            style="-fx-background-color: #F2F5FA;">
+
+    <center>
+        <VBox alignment="CENTER" spacing="18"
+              maxWidth="380"
+              style="-fx-background-color: white;
+                     -fx-background-radius: 12;
+                     -fx-padding: 40;">
+
+            <Label text="BANKING SYSTEM"
+                   style="-fx-font-size: 26px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #142D4E;"/>
+
+            <Label text="Welcome Back"
+                   style="-fx-font-size: 20px;
+                          -fx-font-weight: bold;"/>
+
+            <Label text="Sign in to access your account"
+                   style="-fx-text-fill: #777777;"/>
+
+            <VBox spacing="7">
+                <Label text="Username"/>
+                <TextField fx:id="txtUsername"
+                           promptText="Enter your username"
+                           prefHeight="40"/>
+            </VBox>
+
+            <VBox spacing="7">
+                <Label text="Password"/>
+                <PasswordField fx:id="txtPassword"
+                               promptText="Enter your password"
+                               prefHeight="40"/>
+            </VBox>
+
+            <Label fx:id="lblLoginMessage"
+                   text=""
+                   style="-fx-text-fill: red;"/>
+
+            <Button fx:id="btnLogin"
+                    text="LOGIN"
+                    prefWidth="300"
+                    prefHeight="42"
+                    style="-fx-background-color: #142D4E;
+                           -fx-text-fill: white;
+                           -fx-font-weight: bold;
+                           -fx-background-radius: 6;"/>
+
+            <Label text="Secure Banking Made Simple"
+                   style="-fx-text-fill: #888888;
+                          -fx-font-size: 11px;"/>
+
+        </VBox>
+    </center>
+</BorderPane>
