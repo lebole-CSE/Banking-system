@@ -8,7 +8,8 @@
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="1000" prefHeight="750"
-            style="-fx-background-color: #F2F5FA;">
+            style="-fx-background-color: #F2F5FA;"
+            fx:controller="gui.OpenAccountController">
 
     <top>
         <HBox alignment="CENTER_LEFT"
@@ -112,7 +113,8 @@
                             maxWidth="Infinity"
                             style="-fx-background-color: #142D4E;
                                    -fx-text-fill: white;
-                                   -fx-font-weight: bold;"/>
+                                   -fx-font-weight: bold;"
+                            onAction="#createAccount"/>
 
                     <Button fx:id="btnClearAccount"
                             text="Clear Form"
