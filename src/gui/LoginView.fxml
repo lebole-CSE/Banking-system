@@ -9,6 +9,7 @@
             xmlns:fx="http://javafx.com/fxml/1"
             prefWidth="900" prefHeight="600"
             style="-fx-background-color: #F2F5FA;">
+            fx:controller="gui.LoginController"
 
     <center>
         <VBox alignment="CENTER" spacing="18"
